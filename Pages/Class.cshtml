@@ -1,0 +1,16 @@
+﻿@page
+@model net_on_the_web.Pages.ClassModel
+@{
+}
+
+<p>Class Id: @Model.Class.Id</p>
+<p>Teacher: @Model.Class.Teacher.Name</p>
+<p>Students:</p>
+<ul>
+    @foreach (var student in @Model.Class.Students)
+    {
+        {
+            <li>@student.Id : @student.Name</li>
+        }
+    }
+</ul>
